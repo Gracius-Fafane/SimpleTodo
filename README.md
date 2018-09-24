@@ -1,10 +1,10 @@
-# Pre-work - *Name of App Here*
+# Pre-work - *SimpleTodo*
 
 **Name of your app** is an android app that allows building a todo list and basic todo items management functionality including adding new items, editing and deleting an existing item.
 
-Submitted by: **Your Name Here**
+Submitted by: **Gracius Fafane**
 
-Time spent: **X** hours spent in total
+Time spent: **48** hours spent in total
 
 ## User Stories
 
@@ -41,15 +41,15 @@ As part of your pre-work submission, please reflect on the app and answer the fo
 
 **Question 1:** "What are your reactions to the Android app development platform so far? Compare and contrast Android's approach to layouts and user interfaces in past platforms you've used."
 
-**Answer:** [Enter your answer here in a paragraph or two].
+**Answer:** [I see that Android app development platform is not difficult like the way i thought but the layouts and user interfaces in past platforms i've used is more explicit than Android's].
 
 **Question 2:** "Take a moment to reflect on the `ArrayAdapter` used in your pre-work. How would you describe an adapter in this context and what is its function in Android? Why do you think the adapter is important? Explain the purpose of the `convertView` in the `getView` method of the `ArrayAdapter`."
 
-**Answer:** [Enter your answer here in a paragraph or two].
+**Answer:** [I see that Adapter is like a bridge between UI component and data source. The Adapter is important because we need the adapter for sending the data to an Adapter view than view can takes the data form the adapter view and shows the data on different views like as ListView ect].
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I couldn't find the way to put an item that want to modify in my editActivity and return the result without change the position and don't see the firt way it was. .
 
 ## License
 
