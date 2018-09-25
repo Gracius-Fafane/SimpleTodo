@@ -34,7 +34,7 @@ Here's a walkthrough of implemented user stories:
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
+https://imgur.com/zrEH4OH.gif
 ## Project Analysis
 
 As part of your pre-work submission, please reflect on the app and answer the following questions below:
@@ -45,11 +45,11 @@ As part of your pre-work submission, please reflect on the app and answer the fo
 
 **Question 2:** "Take a moment to reflect on the `ArrayAdapter` used in your pre-work. How would you describe an adapter in this context and what is its function in Android? Why do you think the adapter is important? Explain the purpose of the `convertView` in the `getView` method of the `ArrayAdapter`."
 
-**Answer:** [I see that Adapter is like a bridge between UI component and data source. The Adapter is important because we need the adapter for sending the data to an Adapter view than view can takes the data form the adapter view and shows the data on different views like as ListView ect].
+**Answer:** [I see that Adapter is like a bridge between UI component and data source. The Adapter is important because we need the adapter for sending the data to an Adapter view than view can takes the data form the adapter view and shows the data on different views like as ListView].
 
 ## Notes
 
-I couldn't find the way to put an item that want to modify in my editActivity and return the result without change the position and don't see the firt way it was. .
+I couldn't find the way to put an item that want to modify in my editActivity and return the result without change the position and don't see the firt way the item was. .
 
 ## License
 
