@@ -21,12 +21,14 @@ public class EditItemActivity extends AppCompatActivity {
     }
 
     public void onSubmit (View v){
+       //Save after modification when click on button save
         EditText etText = findViewById(R.id.etText);
         Intent data = new Intent();
         data.putExtra("text", etText.getText().toString());
         int textPosition = getIntent().getIntExtra("position", 0);
         data.putExtra("position", textPosition);
         setResult(RESULT_OK, data);
+        //close editActivity when i finish
         finish();
 
     }
