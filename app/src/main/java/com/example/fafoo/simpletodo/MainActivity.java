@@ -17,27 +17,33 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+   //Create an ArrayList
     ArrayList<String> items;
+    //Create an ArrayAdapter
     ArrayAdapter<String> itemsAdapter;
     ListView LvItems;
     EditText etEditText;
     private final int REQUEST_CODE=20;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Attach adapter to ListView
         setContentView(R.layout.activity_main);
         LvItems = (ListView) findViewById(R.id.LvItems);
+        //Load items during onCreate()
         readItems();
         itemsAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, items);
         LvItems.setAdapter(itemsAdapter);
+        //Invoke listener from onCreate()
         SetupListViewListener();
     }
 
+    //Method for setting up the listener
     private void SetupListViewListener() {
         LvItems.setOnItemLongClickListener(
+                //Attach a LongClickListener to each item for the ListView that can Removes that item and Refreshes the adapter
                 new AdapterView.OnItemLongClickListener() {
                     @Override
                     public boolean onItemLongClick(AdapterView<?> adapter,
@@ -66,11 +72,10 @@ public class MainActivity extends AppCompatActivity {
                         public final AdapterView.OnItemClickListener getOnItemClickListener() {
                         return null;
                     }
-
-
                 });
     }
 
+    //Method to open a file and read a newline-delimited list of items
     private void readItems() {
         File filesDir = getFilesDir();
         File todoFile = new File(filesDir, "todo.txt");
@@ -79,10 +84,9 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             items = new ArrayList<String>();
         }
-
-
     }
 
+    //Method to save a file and write a newline-delimited list of items
     private void writeItems() {
         File filesDir = getFilesDir();
         File todoFile = new File(filesDir, "todo.txt");
@@ -91,16 +95,15 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
+    //Method for adding a item to the list
     public void onAddItem(View v) {
         EditText etNewItem = (EditText) findViewById(R.id.etNewItem);
         String itemText = etNewItem.getText().toString();
         itemsAdapter.add(itemText);
         etNewItem.setText("");
+        //Save items when a new list item is added
         writeItems();
-
     }
 
     @Override
