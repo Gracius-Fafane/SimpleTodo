@@ -10,7 +10,6 @@ public class EditItemActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_item);
         // take the select text in mainActivity with his position and put it in EditActivity
@@ -22,7 +21,6 @@ public class EditItemActivity extends AppCompatActivity {
 
     //Save after modification when I click on button save
     public void onSubmit (View v){
-
         EditText etText = findViewById(R.id.etText);
         Intent data = new Intent();
         data.putExtra("text", etText.getText().toString());
@@ -31,6 +29,5 @@ public class EditItemActivity extends AppCompatActivity {
         setResult(RESULT_OK, data);
         //close editActivity when i finish
         finish();
-
     }
 }
