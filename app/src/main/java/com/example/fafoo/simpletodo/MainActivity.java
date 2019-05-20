@@ -1,8 +1,10 @@
 package com.example.fafoo.simpletodo;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -38,6 +40,38 @@ public class MainActivity extends AppCompatActivity {
         LvItems.setAdapter(itemsAdapter);
         //Invoke listener from onCreate()
         SetupListViewListener();
+    }
+
+    //method is automatically called when back button is pressed
+    @Override
+    public void onBackPressed() {
+        showAlertDialog();
+    }
+
+    private void showAlertDialog(){
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setTitle("Exit");
+        builder.setMessage("Are you sure you want to leave?");
+        //set listeners for dialog buttons
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //finish the activity
+                finish();
+            }
+        });
+
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //dialog gone
+                dialog.dismiss();
+            }
+        });
+
+        //create the alert dialog and show it
+        builder.create().show();
     }
 
     //Method for setting up the listener
